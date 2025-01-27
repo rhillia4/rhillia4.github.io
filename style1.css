@@ -10,10 +10,14 @@ a:active {
     color: black;
 }
 
-a:link {
-    color: blue;
-}
-
 a:visited {
     color: gray;
+}
+
+a:visited:hover {
+    color: white;
+}
+
+a:visited:active {
+    color: black;
 }
