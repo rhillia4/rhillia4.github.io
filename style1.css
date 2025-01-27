@@ -1,5 +1,12 @@
 body {
+    background-color: #210401;
+}
+
+.container {
     background-color: #8a1506;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
 }
 
 a:hover {
