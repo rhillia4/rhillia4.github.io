@@ -10,7 +10,7 @@ a.index-main:active {
     color: black;
 }
 
-a.index-main {
+a.index-main:link {
     color: blue;
 }
 
