@@ -1,6 +1,7 @@
 body {
     background-color: #210401;
-    align-items: center;
+    text-align: center;
+    
 }
 
 .container {
@@ -8,6 +9,7 @@ body {
     width: 80%;
     max-width: 500px;
     text-align: center;
+    margin: auto;
 }
 
 a:hover {
