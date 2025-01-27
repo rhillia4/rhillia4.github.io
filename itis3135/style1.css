@@ -1,19 +1,33 @@
 body {
-    background-color: #8a1506;
+    background-color: #210401;
+    text-align: center;
+    
 }
 
-.index-3135:hover {
+.container {
+    background-color: #8a1506;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+}
+
+a:hover {
     color: white;
 }
 
-.index-3135:active {
+a:active {
     color: black;
 }
 
-.index-3135 {
-    color: blue;
+a:visited {
+    color: gray;
 }
 
-.index-3135:visited {
-    color: gray;
+a:visited:hover {
+    color: white;
+}
+
+a:visited:active {
+    color: black;
 }
