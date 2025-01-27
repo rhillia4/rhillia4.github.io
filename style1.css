@@ -2,18 +2,18 @@ body {
     background-color: #8a1506;
 }
 
-a.index-main:hover {
+a.link1:hover {
     color: white;
 }
 
-a.index-main:active {
+a.link1:active {
     color: black;
 }
 
-a.index-main:link {
+a.link1:link {
     color: blue;
 }
 
-a.index-main:visited {
+a.link1:visited {
     color: gray;
 }
