@@ -1,0 +1,19 @@
+body {
+    background-color: #8a1506;
+}
+
+.index-3135:hover {
+    color: white;
+}
+
+.index-3135:active {
+    color: black;
+}
+
+.index-3135 {
+    color: blue;
+}
+
+.index-3135:visited {
+    color: gray;
+}
