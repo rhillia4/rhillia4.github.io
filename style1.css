@@ -2,18 +2,18 @@ body {
     background-color: #8a1506;
 }
 
-.index-3135:hover {
+.index-main:hover {
     color: white;
 }
 
-.index-3135:active {
+.index-main:active {
     color: black;
 }
 
-.index-3135 {
+.index-main {
     color: blue;
 }
 
-.index-3135:visited {
+.index-main:visited {
     color: gray;
 }
