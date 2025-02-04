@@ -1,4 +1,4 @@
-body {
+.main {
     background-color: #0D160B;
     text-align: center;
     
@@ -14,7 +14,7 @@ body {
 }
 
 a {
-    color: #977390;;
+    color: #0D160B;;
 }
 a:hover {
     color: #AC7B7D;
