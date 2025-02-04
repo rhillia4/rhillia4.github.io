@@ -28,3 +28,13 @@ nav {
     display: block;
 }
 
+.img-size {
+    height: 450px;
+}
+ .list{
+    text-align: left;
+ }
+
+ figcaption {
+font-style: italic; 
+}
