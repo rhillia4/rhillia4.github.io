@@ -1,33 +1,26 @@
 body {
-    background-color: #210401;
+    background-color: #0D160B;
     text-align: center;
     
 }
 
 .container {
-    background-color: #8a1506;
+    background-color: #785589;
     width: 80%;
     max-width: 1000px;
     text-align: center;
     margin: auto;
+    
 }
 
+a {
+    color: #977390;;
+}
 a:hover {
-    color: white;
+    color: #AC7B7D;
 }
 
 a:active {
-    color: black;
+    color: #BB8A89;
 }
 
-a:visited {
-    color: gray;
-}
-
-a:visited:hover {
-    color: white;
-}
-
-a:visited:active {
-    color: black;
-}
