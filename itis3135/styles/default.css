@@ -1,10 +1,10 @@
-.main {
+html {
     background-color: #0D160B;
     text-align: center;
     
 }
 
-.container {
+body {
     background-color: #785589;
     width: 80%;
     max-width: 1000px;
@@ -38,3 +38,18 @@ nav {
  figcaption {
 font-style: italic; 
 }
+
+.link-list {
+    padding: auto;
+    margin: auto;
+    justify-content: center;
+    max-width: 250px;
+    
+    
+}
+
+/* .link-list ul {
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+} */
