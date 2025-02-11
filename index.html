@@ -3,56 +3,172 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <script src="personal-webpage.js"></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <title>Ryan Hilliard || Relaxed Hippo || ITIS 3135 || Student Website</title>
     <style>
-      .main {
-          background-color: #0D160B;
-          text-align: center;
-          
-      }
+      :root {
+        --black: #000000ff;
+        --onyx: #363946ff;
+        --dim-gray: #696773ff;
+        --cadet-gray: #819595ff;
+        --ash-gray: #b1b6a6ff;
+        --antiflash-white: #EBEBEBff;
 
+      }
+      body{
+        margin: 0;
+        border: 1px solid;
+
+      }
       .container {
-          background-color: #785589;
-          width: 80%;
-          max-width: 1000px;
-          text-align: center;
-          margin: auto;
-          
+        display: flex;
+        padding: 0;
+        border: 1px solid;
+
+      }
+      .container-left {
+        width: 5%;
+        height: 100vh;
+        border: 1px solid;
+        align-items: left;
+        background-color: var(--black);
       }
 
-      a {
-          color: #0D160B;;
-      }
-      a:hover {
-          color: #AC7B7D;
-      }
-
-      a:active {
-          color: #BB8A89;
+      .container-left.expanded {
+        width: 25%;
+        height: 100vh;
+        border: 1px solid;
+        align-items: left;
+        background-color: var(--black);
       }
 
+      .container-right {
+        border: 1px solid;
+        width: 100%;
+        text-align: center;
+        background-color: var(--antiflash-white);
+      }
+
+      .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;        
+        width: 25px; 
+        height: 25px; 
+        cursor: pointer;
+        margin: 15px 5px;
+      }
+
+      .menu-icon div {
+        width: 100%;
+        height: 3px;
+        background-color: #363946;
+        border-radius: 5px;
+      }
+
+      .border-top {
+        border-top: 2px solid #363946;
+      }
+
+      .border-bottom{
+        border-bottom: 2px solid #363946;
+      }
+
+      
+      .link1 {
+        text-decoration: none;
+        color: var(--black);
+        font-weight: 600;
+      }
+
+      .link1-border {
+        padding: 5px;
+        border: 3px solid var(--black);
+        border-radius: 10px;
+      }
+      .link1:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        color: var(--gunmetal);
+        text-decoration-color: var(--gunmetal);
+      }
+
+      .link2 {
+        text-decoration: none;
+        color: var(--xanthous);
+        font-weight: 600;        
+      }
+
+      .link2-border {
+        padding: 5px;
+        border: 3px solid var(--xanthous);
+        border-radius: 10px;
+      }
+
+      .link2:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        color: var(--lion);
+      }
+
+
+      .link3 {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;        
+
+      }
+
+      .link3-border {
+        padding: 5px;
+        border: 3px solid var(--marian-blue);
+        background-color: var(--marian-blue);
+        border-radius: 10px;
+      }
+
+      .link3:hover {
+        color: var(--antiflash-white);
+        text-decoration: underline;
+        text-emphasis: var(--antiflash-white);
+        text-decoration-thickness: 2px;
+      }
 
     </style>
 
   </head>
-  <body class="container">
-    <header>    
-      <h1>Ryan Hilliard's Portfolio 3135</h1>
-      <nav>
-        <a href="./itis3135/index.html">3135 Website</a>
-      </nav>
-    </header>
-    <main>
-      <h2>Ryan's Portfolio</h2>
-      <p>...</p>
-</main>
-<footer>
-  <p>Additional links</p>
-  <nav>
-    <a href="https://www.linkedin.com/in/ryan-hilliard-9a5534319/">LinkedIn Account</a>
-    <a href="https://github.com/rhillia4">GitHub Account</a>
-  </nav>
-</footer>
+  <body>
+    <section class="container">
+      <section class="container-left" onclick="expandContainer()">
+        <div class="menu-icon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="border-top"></div>
+        <nav>
+          <a></a>
+        </nav>
+      </section>
+      <section class="container-right">
+        <header>    
+          <h1>Ryan Hilliard's Portfolio 3135</h1>
+          <nav>
+            <a href="./itis3135/index.html">3135 Website</a>
+          </nav>
+        </header>
+        <main>
+          <h2>Ryan's Portfolio</h2>
+          <p>...</p>
+        </main>
+        <footer class="border-top">
+          <p>Additional links</p>
+          <nav>
+            <a href="https://www.linkedin.com/in/ryan-hilliard-9a5534319/">LinkedIn Account</a>
+            <a href="https://github.com/rhillia4">GitHub Account</a>
+          </nav>
+        </footer>
+      </section>
+    </section>
   </body>
 </html>
