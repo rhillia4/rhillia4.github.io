@@ -16,6 +16,7 @@
           --lion: #b09656ff;
           --xanthous: #e7b847ff;
           --antiflash-white: #EBEBEBff;
+          --gunmetal: #303440;
       }
 
       /* General Styling */
@@ -29,32 +30,33 @@
       /* Header Styling */
       header {
           border-bottom: 4px solid var(--xanthous);
-          justify-content: space-between;
           font-size: .85rem;
-          border: 1px solid black;
           display: flex;
       }
 
       .header-left{
         align-items: left;
-        border: 1px solid black;
         width: 50%;
-
+        margin-left: 10px;
       }
 
       .header-right {
         width: 50%;
         display: flex;
-        border: 1px solid black;
         flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-      
-      h1 {
-        
+        gap: 10px;
+        text-align: center;
+        padding: 10px;
+        align-items: flex-end;
       }
 
+      .header-right nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+      }
+      
       .logo {
         margin: 0;
         object-fit: cover;
@@ -65,14 +67,6 @@
         border-radius: 15px;
       }  
 
-      
-
-
-      header nav a {
-        margin: 10px;
-
-      }
-
       .link1 {
         text-decoration: none;
         color: black;
@@ -80,13 +74,15 @@
       }
 
       .link1-border {
-        padding: 5px 0;
+        padding: 5px;
         border: 3px solid black;
         border-radius: 10px;
       }
       .link1:hover {
         text-decoration: underline;
         text-decoration-thickness: 2px;
+        color: var(--gunmetal);
+        text-decoration-color: var(--gunmetal);
       }
 
       .link2 {
@@ -96,7 +92,7 @@
       }
 
       .link2-border {
-        padding: 5px 0;
+        padding: 5px;
         border: 3px solid var(--xanthous);
         border-radius: 10px;
       }
@@ -116,7 +112,7 @@
       }
 
       .link3-border {
-        padding: 5px 0;
+        padding: 5px;
         border: 3px solid var(--marian-blue);
         background-color: var(--marian-blue);
         border-radius: 10px;
@@ -136,10 +132,24 @@
         border: 1px solid black;
 
       }
+
+      a {
+        color: var(--xanthous);
+      }
+
+      a:hover {
+        color: var(--lion);
+      }
+
+      footer {
+        text-align: center;
+        border-top: 4px solid var(--xanthous);
+      }
+
   </style>
 </head>
+<section class="container">
 <body>
-  <section class="container">
   <header> 
     <section class="header-left">   
       <img class="logo" src="images/hilliarddevelopment-logo.jpg" alt="Hilliard Development">
@@ -156,14 +166,30 @@
 
   <main>
       <h2>Notable Works</h2>
-      <p>Welcome to my web development and software portfolio! Here, you'll find my latest projects and designs.</p>
+      <p>Welcome to my Hilliard Development's software portfolio. Below, you'll find my latest projects and designs.</p>
+      <h3>What Sets Us Apart at Hilliard Development</h3>
       <ul>
-        <li></li>
+          <li>Unique and Personal Approach to Every Project</li>
+          <li>Cutting-Edge Designs that Keep You Ahead of Trends</li>
+          <li>Seamless Integration of User Experience (UX) and Functionality</li>
+          <li>Collaborative Partnership with Clients to Bring Visions to Life</li>
+          <li>Comprehensive Range of Services from Web Design to Development</li>
+          <li>Full Transparency in Our Development Process</li>
+          <li>Strong Focus on Accessibility and Inclusivity in Every Design</li>
+          <li>Expertise in Content Management Systems (CMS) like WordPress</li>
+          <li>Top-notch Security Features for Safe and Reliable Websites</li>
+          <li>Amazing Client Testimonials - Hear From Our Happy Clients!</li>
       </ul>
   </main>
 
   <footer>
-      <p>© 2025 Hilliard Development. All Rights Reserved.</p>
+    <p>Contact Us:</p>
+    <p>Email: hilliarddevelopment@gmail.com</p>
+    <p>Phone #: 123-456-7890</p>
+    <p>Address: 1234 Sesame St</p>
+      <p style="border-top: 4px solid var(--xanthous);
+                padding-top: 10px;">
+        © 2025 Hilliard Development. All Rights Reserved.</p>
       <nav>
           <a href="#">Privacy Policy</a> | 
           <a href="#">Terms of Use</a>
