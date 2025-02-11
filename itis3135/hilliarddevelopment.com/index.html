@@ -19,15 +19,23 @@
           --gunmetal: #303440;
       }
 
-      /* General Styling */
-      body {
-          background-color: var(--antiflash-white);
-          font-family: 'Roboto', sans-serif;
-          margin: auto;
-          width: 80%;
+      .container{
+        background-color: var(--white);
+        margin: 50px auto;
+        border-radius: 10px;
+        padding: 25px;
+        border: 1px solid black;
+        font-family: 'Roboto', sans-serif;
       }
 
-      /* Header Styling */
+      body {
+          background-color: var(--antiflash-white);
+          margin: auto;
+          width: 80%;
+          min-width: 400px;
+          max-width: 825px;
+      }
+
       header {
           border-bottom: 4px solid var(--xanthous);
           font-size: .85rem;
@@ -46,7 +54,6 @@
         flex-direction: column;
         gap: 10px;
         text-align: center;
-        padding: 10px;
         align-items: flex-end;
       }
 
@@ -124,14 +131,7 @@
         text-emphasis: var(--antiflash-white);
         text-decoration-thickness: 2px;
       }
-      .container{
-        background-color: var(--white);
-        margin: 50px auto;
-        border-radius: 10px;
-        padding: 25px;
-        border: 1px solid black;
-
-      }
+      
 
       a {
         color: var(--xanthous);
@@ -144,6 +144,15 @@
       footer {
         text-align: center;
         border-top: 4px solid var(--xanthous);
+      }
+
+      .border-top {
+        border-top: 4px solid var(--xanthous);
+        padding-top: 10px;
+      }
+      
+      li {
+        margin-top: 15px;
       }
 
   </style>
@@ -187,8 +196,7 @@
     <p>Email: hilliarddevelopment@gmail.com</p>
     <p>Phone #: 123-456-7890</p>
     <p>Address: 1234 Sesame St</p>
-      <p style="border-top: 4px solid var(--xanthous);
-                padding-top: 10px;">
+      <p class="border-top">
         © 2025 Hilliard Development. All Rights Reserved.</p>
       <nav>
           <a href="#">Privacy Policy</a> | 
