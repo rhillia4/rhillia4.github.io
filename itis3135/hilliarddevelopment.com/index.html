@@ -28,74 +28,138 @@
 
       /* Header Styling */
       header {
-          background-color: var(--navy-blue);
-          padding: 20px;
-          border-bottom: 4px solid var(--accent-yellow);
-          display: flex;
-          align-items: center;
+          border-bottom: 4px solid var(--xanthous);
           justify-content: space-between;
           font-size: .85rem;
+          border: 1px solid black;
+          display: flex;
+      }
+
+      .header-left{
+        align-items: left;
+        border: 1px solid black;
+        width: 50%;
+
+      }
+
+      .header-right {
+        width: 50%;
+        display: flex;
+        border: 1px solid black;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
       }
       
       h1 {
         
       }
+
+      .logo {
+        margin: 0;
+        object-fit: cover;
+        height: 250px;
+        width: 250px;
+        clip-path: inset(35px round 10px); 
+        margin: -45px;
+        border-radius: 15px;
+      }  
+
+      
+
+
       header nav a {
         margin: 10px;
+
       }
 
-      #link1 {
+      .link1 {
         text-decoration: none;
         color: black;
+        font-weight: 600;
       }
 
-      #link1:hover {
-
+      .link1-border {
+        padding: 5px 0;
+        border: 3px solid black;
+        border-radius: 10px;
+      }
+      .link1:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
       }
 
-      #link2 {
+      .link2 {
         text-decoration: none;
-        
+        color: var(--xanthous);
+        font-weight: 600;        
       }
 
-      #link2-border {
-        border: 2px solid var(--xanthous);
+      .link2-border {
+        padding: 5px 0;
+        border: 3px solid var(--xanthous);
+        border-radius: 10px;
       }
 
-      #link2:hover {
-        
+      .link2:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        color: var(--lion);
       }
 
-      #link3 {
-        
+
+      .link3 {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;        
+
       }
 
-      #link3:hover {
-        
+      .link3-border {
+        padding: 5px 0;
+        border: 3px solid var(--marian-blue);
+        background-color: var(--marian-blue);
+        border-radius: 10px;
+      }
+
+      .link3:hover {
+        color: var(--antiflash-white);
+        text-decoration: underline;
+        text-emphasis: var(--antiflash-white);
+        text-decoration-thickness: 2px;
       }
       .container{
         background-color: var(--white);
         margin: 50px auto;
         border-radius: 10px;
-        
+        padding: 25px;
+        border: 1px solid black;
+
       }
   </style>
 </head>
 <body>
   <section class="container">
-  <header>    
+  <header> 
+    <section class="header-left">   
+      <img class="logo" src="images/hilliarddevelopment-logo.jpg" alt="Hilliard Development">
       <h1>Hilliard Development</h1>
+    </section>
+    <section class="header-right">
       <nav>
-          <a href=".." id="link1">3135 Homepage</a>
-          <span id="link2-border"><a href="#" id="link2">Portfolio</a></span>
-          <a href="#" id="link3">Contact</a>
+          <span class="link1-border" ><a href=".." class="link1">3135 Homepage</a></span>
+          <span class="link2-border"><a href="#" class="link2">Portfolio</a></span>
+          <span class="link3-border"><a href="#" class="link3">Contact</a></span>
       </nav>
+    </section>
   </header>
 
   <main>
-      <h2>Ryan's Portfolio</h2>
+      <h2>Notable Works</h2>
       <p>Welcome to my web development and software portfolio! Here, you'll find my latest projects and designs.</p>
-      <button onclick="alert('Coming Soon!')">View Projects</button>
+      <ul>
+        <li></li>
+      </ul>
   </main>
 
   <footer>
