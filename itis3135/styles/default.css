@@ -1,20 +1,28 @@
 html {
-    background-color: #0D160B;
-    text-align: center;
-    
+    background-color: #0D160B;    
 }
 
 body {
     background-color: #785589;
     width: 80%;
     max-width: 1000px;
-    text-align: center;
     margin: auto;
-    
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    margin: 10px;
+}
+p a {
+    margin: 0;
 }
 
 a {
     color: #0D160B;
+    margin: 10px;
 }
 a:hover {
     color: #AC7B7D;

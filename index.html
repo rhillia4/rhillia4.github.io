@@ -28,7 +28,8 @@
 
       }
       .container-left {
-        width: 5%;
+        min-width: 35px;
+        width: 35px;
         height: 100vh;
         border: 1px solid;
         align-items: left;
@@ -37,6 +38,7 @@
 
       .container-left.expanded {
         width: 25%;
+        min-width: fit-content;
         height: 100vh;
         border: 1px solid;
         align-items: left;
@@ -48,6 +50,7 @@
         width: 100%;
         text-align: center;
         background-color: var(--antiflash-white);
+        color: var(--onyx);
       }
 
       .menu-icon {
@@ -58,6 +61,7 @@
         height: 25px; 
         cursor: pointer;
         margin: 15px 5px;
+        align-items: center;
       }
 
       .menu-icon div {
@@ -72,66 +76,32 @@
       }
 
       .border-bottom{
+        padding-bottom: 5px;
         border-bottom: 2px solid #363946;
       }
 
       
       .link1 {
         text-decoration: none;
-        color: var(--black);
+        color: var(--cadet-gray);
         font-weight: 600;
       }
 
       .link1-border {
-        padding: 5px;
-        border: 3px solid var(--black);
-        border-radius: 10px;
       }
+
       .link1:hover {
         text-decoration: underline;
         text-decoration-thickness: 2px;
-        color: var(--gunmetal);
-        text-decoration-color: var(--gunmetal);
+        color: var(--ash-gray);
+        text-decoration-color: var(--ash-gray);
       }
 
-      .link2 {
-        text-decoration: none;
-        color: var(--xanthous);
-        font-weight: 600;        
+      .link-container {
+        color: var(--cadet-gray)
       }
-
-      .link2-border {
-        padding: 5px;
-        border: 3px solid var(--xanthous);
-        border-radius: 10px;
-      }
-
-      .link2:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-        color: var(--lion);
-      }
-
-
-      .link3 {
-        color: var(--white);
-        text-decoration: none;
-        font-weight: 600;        
-
-      }
-
-      .link3-border {
-        padding: 5px;
-        border: 3px solid var(--marian-blue);
-        background-color: var(--marian-blue);
-        border-radius: 10px;
-      }
-
-      .link3:hover {
-        color: var(--antiflash-white);
-        text-decoration: underline;
-        text-emphasis: var(--antiflash-white);
-        text-decoration-thickness: 2px;
+      .link-container.expanded {
+        color: var(--cadet-gray)
       }
 
     </style>
@@ -146,19 +116,22 @@
           <div></div>
         </div>
         <div class="border-top"></div>
+        <section class="link-container">
         <nav>
-          <a></a>
+          <p class="border-bottom">Other Pages:</p>
+          <a class="link1 hidden" href="./itis3135/index.html">3135 Website</a>
         </nav>
+      </section>
       </section>
       <section class="container-right">
         <header>    
           <h1>Ryan Hilliard's Portfolio 3135</h1>
           <nav>
-            <a href="./itis3135/index.html">3135 Website</a>
+            
           </nav>
         </header>
         <main>
-          <h2>Ryan's Portfolio</h2>
+          <h2>Welcome</h2>
           <p>...</p>
         </main>
         <footer class="border-top">
