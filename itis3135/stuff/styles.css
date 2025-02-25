@@ -1,0 +1,12 @@
+body {
+    background: repeating-linear-gradient(
+        45deg,
+        white,
+        white,
+        white
+    );
+}
+
+ol {
+    background-color: burlywood;
+}
