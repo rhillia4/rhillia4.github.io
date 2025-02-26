@@ -1,0 +1,149 @@
+:root {
+    --black: #000000ff;
+    --onyx: #363946ff;
+    --dim-gray: #696773ff;
+    --cadet-gray: #819595ff;
+    --ash-gray: #b1b6a6ff;
+    --antiflash-white: #EBEBEBff;
+  }
+
+  @font-face {
+    font-family: 'Adamina'; 
+    src: url('../fonts/Adamina-Regular.ttf') format('trueType');
+    font-weight: normal; /* Specify the font weight if known */
+    font-style: normal;  /* Specify if it's italic or normal */
+  }
+
+  body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--antiflash-white);
+    width: 100%;
+    height: 100vh;
+    min-height: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+    font-family: "Adamina";
+    color: var(--onyx);
+  }
+
+  
+  
+  .container-left {
+    /* width: 5%; */
+    width: fit-content;
+    height: 100%;
+    border: 1px solid;
+    /* align-items: left; */
+    background-color: var(--black);
+    position: fixed;
+    transition: width .3s ease-in-out;
+    overflow: hidden; 
+    z-index: 1;
+    margin-right: 7.5%;
+
+  }
+
+  .container-left.expanded {
+    width: 100px;
+    min-width: fit-content;
+    height: 100%;
+    border: 1px solid;
+    /* align-items: left; */
+    background-color: var(--black);
+    position: fixed;
+  }
+
+  .container-right {
+    text-align: center;
+    color: var(--onyx);
+    width: calc(100vw - 38px);
+    position: absolute;
+    left: 36px;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;        
+    width: 25px; 
+    height: 25px; 
+    cursor: pointer;
+    margin: 15px 5px;
+    align-items: center;
+  }
+
+  .menu-icon div {
+    width: 100%;
+    height: 3px;
+    background-color: #363946;
+    border-radius: 5px;
+  }
+
+  .border-top {
+    border-top: 2px solid #363946;
+  }
+
+  .border-bottom{
+    padding-bottom: 5px;
+    border-bottom: 2px solid #363946;
+  }
+
+  .link-title{
+    color: var(--ash-gray);
+    margin: 10px 5px;
+  }
+  .link1 {
+    text-decoration: none;
+    color: var(--dim-gray);
+    font-weight: 600;
+    display: block;
+    margin: 10px 5px;
+  }
+
+  
+
+  .link1:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    color: var(--ash-gray);
+    text-decoration-color: var(--ash-gray);
+  }
+
+#link-container {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; 
+}
+
+.container-left.expanded #link-container {
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+#portfolio-container {
+  width: 80%;
+  text-align: left;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.portfolio-link {
+    margin: auto;
+    width: fit-content;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: 2px solid var(--onyx);
+}
+
+.portfolio-link:hover {
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.bold {
+    font-weight: 800;
+}
+  
