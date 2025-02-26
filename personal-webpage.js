@@ -74,7 +74,9 @@ how to evaluate companies and understand how the stock market works
 <ul>
 <li>Supported servers with meal delivery and table service</li>
 <li>Provided excellent customer service to enhance dining experience</li>
+</ul>
 <p class="bold">Carolina Pool Management Lifeguard, Olde Providence South, NC Summer 2020</p>
+<ul>
 <li>Monitored pool safety and enforced rules to ensure a safe environment</li>
 <li>Provided first aid and emergency response. Managed ten incidents</li>
 <li>Obtained additional certification to be able to teach young swimmers how to swim</li>
