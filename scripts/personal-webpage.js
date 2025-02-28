@@ -4,26 +4,27 @@ function expandContainer() {
 
   let linkContainer = document.getElementById('link-container');
 
-  // Check if the content is already there; if so, clear it
+  // Check if content is already there; if so, clear it
   if (linkContainer.innerHTML.trim() === "") {
       linkContainer.innerHTML = `
-          <nav>
-              <p class="border-bottom border-top link-title">Pages:</p>
-              <a class="link1 hidden" href="./itis3135/index.html">3135 Website</a>
-          </nav>
-          <nav>
-              <p class="border-bottom border-top link-title">3135 Pages:</p>
-              <a class="link1" href="itis3135/hilliarddevelopment.com/index.html">Hilliard Development</a>
-              <a class="link1" href="itis3135/relaxed-hippo">Relaxed Hippo Haberdashery</a>
-              <a class="link1" href="itis3135/stuff/Bad! FILE.htm">Bad Webpage</a>
-          </nav>
-          
-          <nav>
-            <p class="border-bottom border-top link-title">Additional links</p>
-            <a class="link1" href="https://www.linkedin.com/in/ryan-hilliard-9a5534319/">LinkedIn Account</a>
-            <a class="link1" href="https://github.com/rhillia4">GitHub Account</a>
-          </nav>
+      <header>
+          <div data-include="components/header.html"></div>
+      </header>
+      <footer>
+          <div data-include="components/footer.html"></div>
+      </footer>
       `;
+
+      // Ensure the script is reloaded after inserting the HTML
+      let script = document.createElement("script");
+      script.src = "scripts/HTMLInclude.js";
+      script.onload = function() {
+          if (typeof includeHTML === "function") {
+              includeHTML();
+          }
+      };
+      document.body.appendChild(script);
+
   } else {
       linkContainer.innerHTML = "";
   }
@@ -34,7 +35,7 @@ function expandPortfolio() {
   // Check if the content is already there; if so, clear it
   if (portfolioContainer.innerHTML.trim() === "") {
     portfolioContainer.innerHTML = `
-<p><span  class="bold">Ryan Hilliard</span> <span class="bold">Phone:</span> 704-502-2483 <span class="bold">Email:</span> ryanhhilliard@gmail.com</p>
+<p><span  class="bold">Ryan Hilliard</span> | <span class="bold">Phone:</span> 704-502-2483 | <span class="bold">Email:</span> ryanhhilliard@gmail.com</p>
 <p class="bold">EDUCATION:</p>
 <p>University of North Carolina at Charlotte | Charlotte, NC | May 2026 Bachelor of Science in
 Computer Science | Concentration: Software Engineering | UNCC GPA: 3.85</p>
