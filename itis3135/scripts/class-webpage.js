@@ -1,7 +1,6 @@
 // Variables to store preloaded content
 let headerContent = "";
 let footerContent = "";
-let portfolioContent = "";
 
 // Function to preload content
 function preloadContent() {
@@ -10,14 +9,9 @@ function preloadContent() {
     .then((data) => headerContent = data)
     .catch((error) => console.error("Error loading header:", error));
 
-    fetch("components/footer.html")
+  fetch("components/footer.html")
     .then((response) => response.text())
     .then((data) => footerContent = data)
-    .catch((error) => console.error("Error loading footer:", error));
-
-    fetch("components/portfolio.html")
-    .then((response) => response.text())
-    .then((data) => portfolioContent = data)
     .catch((error) => console.error("Error loading footer:", error));
 }
 
@@ -51,11 +45,11 @@ function toggleSidebar() {
   }
 }
 
-function togglePortfolio() {
-  const portfolioContainer = document.getElementById("portfolio-container");
+function toggleContent() {
+  const contentContainer = document.getElementById("content-container");
 
   // Check if the content is already there; if so, clear it
-  portfolioContainer.innerHTML = portfolioContainer.innerHTML.trim() === ""
-    ? portfolioContent
+  contentContainer.innerHTML = contentContainer.innerHTML.trim() === ""
+    ? "<p>To be determined</p>"
     : "";
 }

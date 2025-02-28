@@ -122,14 +122,14 @@
     pointer-events: auto; 
 }
 
-#portfolio-container {
+#content-container {
   width: 80%;
   text-align: left;
   padding: 5px;
   margin: 0 auto;
 }
 
-.portfolio-link {
+.content-link {
     margin: auto;
     width: fit-content;
     padding: 5px 5px 0;
@@ -137,7 +137,7 @@
     border: 2px solid var(--onyx);
 }
 
-.portfolio-link:hover {
+.content-link:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
