@@ -13,69 +13,70 @@
     font-weight: normal; /* Specify the font weight if known */
     font-style: normal;  /* Specify if it's italic or normal */
   }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
   body{
-    padding: 0;
-    margin: 0;
     background-color: var(--antiflash-white);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    min-height: fit-content;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-content: space-evenly;
     font-family: "Adamina";
     color: var(--onyx);
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
   }
 
   
   
   .container-left {
-    /* width: 5%; */
-    width: fit-content;
-    height: 100%;
-    border: 1px solid;
-    /* align-items: left; */
+    width: 5%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
     background-color: var(--black);
-    position: fixed;
     transition: width .3s ease-in-out;
     overflow: hidden; 
     z-index: 1;
-    margin-right: 7.5%;
   }
 
   .container-left.expanded {
-    width: 100px;
     min-width: fit-content;
     height: 100%;
-    border: 1px solid;
-    /* align-items: left; */
-    background-color: var(--black);
-    position: fixed;
+
   }
 
   .container-right {
+    flex: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 95%;
     text-align: center;
     color: var(--onyx);
-    width: calc(100vw - 36px);
-    position: absolute;
-    left: 36px;
   }
 
   .menu-icon {
     display: flex;
     flex-direction: column;
     gap: 5px;        
-    width: 35px; 
-    height: 35px; 
     cursor: pointer;
-    margin: 15px 5px;
-    align-items: center;
+    position: relative;
+    height: 5%;
+    left: 10px;
+    top: 10px;
   }
 
   .menu-icon div {
-    width: 100%;
+    width: 50%;
+    max-width: 35px;
     height: 5px;
     background-color: var(--dim-gray);
     border-radius: 5px;

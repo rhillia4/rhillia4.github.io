@@ -29,9 +29,15 @@
     color: var(--onyx);
   }
 
+  main {
+    width: 90%;
+    border: 5px solid green;
+  }
+
   .container-left {
     width: 35px;
     min-width: fit-content;
+    max-width: 10%;
     height: 100%;
     background-color: var(--black);
     position: fixed;
