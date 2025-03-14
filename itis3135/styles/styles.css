@@ -138,6 +138,11 @@ main {
   text-decoration-color: var(--ash-gray);
 }
 
+.no-hover:hover {
+  text-decoration: none;
+}
+
+
 .link2 {
   text-decoration: none;
   color: var(--onyx);
@@ -239,4 +244,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.dim-gray{
+  color: var(--dim-gray);
+}
+
+.padding-left{
+  padding-left: 5px;
 }
