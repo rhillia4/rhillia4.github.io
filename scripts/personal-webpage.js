@@ -4,21 +4,33 @@ let footerContent = "";
 let portfolioContent = "";
 
 // Function to preload content
-function preloadContent() {
-  fetch("components/header.html")
-    .then((response) => response.text())
-    .then((data) => headerContent = data)
-    .catch((error) => console.error("Error loading header:", error));
-
-    fetch("components/footer.html")
-    .then((response) => response.text())
-    .then((data) => footerContent = data)
-    .catch((error) => console.error("Error loading footer:", error));
-
-    fetch("components/portfolio.html")
-    .then((response) => response.text())
-    .then((data) => portfolioContent = data)
-    .catch((error) => console.error("Error loading footer:", error));
+async function preloadContent() {
+    try {
+      const headerResponse = await fetch("components/header.html");
+      headerContent = await headerResponse.text();
+  
+      const footerResponse = await fetch("components/footer.html");
+      footerContent = await footerResponse.text();
+      
+      const portfolioResponse = await fetch("components/portfolio.html");
+      portfolioContent = await portfolioResponse.text();
+  
+      // Insert the footer into the page after fetching
+      document.getElementById("footer-container").innerHTML = footerContent;
+      document.querySelector(".container-left").innerHTML = 
+          `
+          <div class="menu-icon" onclick="toggleSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <section id="link-container">
+          </section>
+          `;
+    } catch (error) {
+      console.error("Error preloading content:", error);
+    }
+      
 }
 
 // Call preloadContent when the page loads
@@ -30,12 +42,8 @@ function toggleSidebar() {
 
   const linkContainer = document.getElementById("link-container");
 
-  // Check if content is already there; if so, clear it
   if (linkContainer.innerHTML.trim() === "") {
-    linkContainer.innerHTML = `
-      <header>${headerContent}</header>
-      <footer>${footerContent}</footer>
-    `;
+    linkContainer.innerHTML = `<header>${headerContent}</header>`;
 
     // Ensure the script is executed after inserting content
     const script = document.createElement("script");

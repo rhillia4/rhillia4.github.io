@@ -4,7 +4,7 @@
   --dim-gray: #696773ff;
   --cadet-gray: #819595ff;
   --ash-gray: #b1b6a6ff;
-  --antiflash-white: #EBEBEBff;
+  --warm-gray: #c5c0c0;
 }
 
 @font-face {
@@ -20,7 +20,7 @@
 }
 
 body{
-  background-color: var(--antiflash-white);
+  background-color: var(--warm-gray);
   width: 100vw;
   height: 100vh;
   font-family: "Adamina";
@@ -42,10 +42,6 @@ main {
   body {
       font-size: 1.1em; /* Slightly larger text */
   }
-
-  #colorbox {
-      background-color: orange; /* Example adjustment */
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -63,18 +59,20 @@ main {
 .container-left {
   width: 5%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background-color: var(--black);
   transition: width .3s ease-in-out;
   overflow: hidden; 
   z-index: 1;
+  border: 2px solid var(--onyx);
 }
 
 .container-left.expanded {
   min-width: fit-content;
   height: 100%;
+  border-radius: 0 5px 5px 0;
 
 }
 
@@ -87,6 +85,9 @@ main {
   height: 100%;
   text-align: center;
   color: var(--onyx);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-icon {
@@ -121,15 +122,13 @@ main {
   color: var(--ash-gray);
   margin: 10px 5px;
 }
+
 .link1 {
   text-decoration: none;
   color: var(--dim-gray);
-  font-weight: 600;
-  display: block;
+  font-weight: 900;
   margin: 10px 5px;
 }
-
-
 
 .link1:hover {
   text-decoration: underline;
@@ -167,6 +166,7 @@ main {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none; 
+
 }
 
 .container-left.expanded #link-container {
@@ -182,7 +182,7 @@ main {
 }
 
 .content-link {
-    margin: auto;
+    margin: 10px auto;
     width: fit-content;
     padding: 5px 5px 0;
     border-radius: 5px;
@@ -256,4 +256,22 @@ main {
 
 .padding-left{
   padding-left: 5px;
+}
+
+#footer-container{
+  position: relative;
+  bottom: 0;
+  background-color: var(--black);
+  border-radius: 0 5px 0 0;
+  border: 2px solid var(--onyx);
+  border-left: none;
+  padding-bottom: 5px;
+  width: 100%;
+
+}
+
+.sidebar-links-format{
+  display: flex;
+  flex-direction: column;
+
 }

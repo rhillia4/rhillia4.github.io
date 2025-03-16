@@ -3,33 +3,53 @@ let headerContent = "";
 let footerContent = "";
 
 // Function to preload content
-function preloadContent() {
-  fetch("components/header.html")
-    .then((response) => response.text())
-    .then((data) => headerContent = data)
-    .catch((error) => console.error("Error loading header:", error));
+async function preloadContent() {
+  try {
+    const headerResponse = await fetch("components/header.html");
+    headerContent = await headerResponse.text();
 
-  fetch("components/footer.html")
-    .then((response) => response.text())
-    .then((data) => footerContent = data)
-    .catch((error) => console.error("Error loading footer:", error));
+    const footerResponse = await fetch("components/footer.html");
+    footerContent = await footerResponse.text();
+
+    // Insert the footer into the page after fetching
+    const footerContainer = document.getElementById("footer-container");
+    if (footerContainer) {
+      footerContainer.innerHTML = footerContent;
+    }
+
+    // Insert sidebar structure
+    const sidebar = document.querySelector(".container-left");
+    if (sidebar) {
+      sidebar.innerHTML = `
+        <div class="menu-icon" onclick="toggleSidebar()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <section id="link-container"></section>
+      `;
+    }
+  } catch (error) {
+    console.error("Error preloading content:", error);
+  }
 }
 
 // Call preloadContent when the page loads
 document.addEventListener("DOMContentLoaded", preloadContent);
 
-function toggleSidebar() {
+async function toggleSidebar() {
   const container1 = document.querySelector(".container-left");
   container1.classList.toggle("expanded");
 
   const linkContainer = document.getElementById("link-container");
 
-  // Check if content is already there; if so, clear it
   if (linkContainer.innerHTML.trim() === "") {
-    linkContainer.innerHTML = `
-      <header>${headerContent}</header>
-      <footer>${footerContent}</footer>
-    `;
+    if (!headerContent) {
+      // Ensure content is loaded before inserting
+      const headerResponse = await fetch("components/header.html");
+      headerContent = await headerResponse.text();
+    }
+    linkContainer.innerHTML = `<header>${headerContent}</header>`;
 
     // Ensure the script is executed after inserting content
     const script = document.createElement("script");
@@ -45,10 +65,9 @@ function toggleSidebar() {
   }
 }
 
+
 function toggleContent() {
   const contentContainer = document.getElementById("content-container");
-
-  // Check if the content is already there; if so, clear it
   contentContainer.innerHTML = contentContainer.innerHTML.trim() === ""
     ? "<p>To be determined</p>"
     : "";
