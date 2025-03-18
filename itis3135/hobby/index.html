@@ -84,14 +84,15 @@
         flex: 1;
         position: absolute;
         right: 0;
-        top: 5%;
+        top: 8%;
         width: 95%;
-        height: 95%;
+        height: 92%;
         text-align: center;
         color: var(--ebony);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-top: 10px;
         }
 
         .menu-icon {
@@ -197,21 +198,17 @@
 
         .top-bar{
             width: 95%;
-            height: 5%;
+            height: 8%;
             position: fixed;
             right: 0;
             top: 0;
             background-color: var(--black);
-            transition: width .3s ease-in-out;
-            overflow: hidden; 
             z-index: 0;
             border: 2px solid var(--ebony);
             border-left: none;
             padding: 10px 10px;
-        }
-        .top-bar.expanded{
-            height: fit-content;
             border-radius: 0 5px 5px 0;
+
         }
         .top-bar-nav{
             display: flex;
@@ -237,8 +234,8 @@
       <section class="container-left"></section>
 
       <section class="container-right">
-        <section class="top-bar" onmouseenter="toggleTopBar()" onmouseleave="toggleTopBar()">
-        </section>
+        <!-- <section class="top-bar" onmouseenter="toggleTopBar()" onmouseleave="toggleTopBar()"></section> -->
+        <section class="top-bar"></section>
         <div>
           <h1>Ryan Hilliard || Relaxed Hippo || Hobby Webpage</h1>
           <section class="content"></section>

@@ -53,6 +53,9 @@ async function preloadContent() {
   } catch (error) {
     console.error("Error preloading content:", error);
   }
+  const container1 = document.querySelector(".top-bar");
+
+  container1.innerHTML = `${topBarContent}`;
 }
 
 // Call preloadContent when the page loads
