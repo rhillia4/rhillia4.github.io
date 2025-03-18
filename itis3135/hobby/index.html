@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="scripts/hobby-webpage.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Ryan Hilliard || Relaxed Hippo || ITIS 3135 || Hobby Website</title>
+    <style>
+        :root {
+            --black: #090909ff;
+            --ebony: #443825;
+            --cambridge-blue: #0e5a11;
+            --nyanza: #789f7c;
+            --tiffany-blue: #8ddbe0ff;
+        }
+        @font-face {
+        font-family: 'Adamina'; 
+        src: url('../fonts/Adamina-Regular.ttf') format('trueType');
+        font-weight: normal; /* Specify the font weight if known */
+        font-style: normal;  /* Specify if it's italic or normal */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+        background-color: var(--nyanza);
+        font-family: "Adamina";
+        color: var(--ebony);
+        }
+
+        main {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto; 
+        display: flex;
+
+        }
+        @media screen and (min-width: 601px) and (max-width: 980px) {
+        main {
+            width: 95%; /* Slightly wider for tablets */
+        }
+
+        body {
+            font-size: 1.1em; /* Slightly larger text */
+        }
+        }
+
+        @media screen and (max-width: 600px) {
+        main {
+            width: 98%; /* Almost full width */
+        }
+
+        body {
+            font-size: 1.2em; /* Increase readability */
+        }
+        }
+
+
+
+        .container-left {
+        width: 5%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: var(--black);
+        transition: width .3s ease-in-out;
+        overflow: hidden; 
+        z-index: 1;
+        border: 2px solid var(--ebony);
+        }
+
+        .container-left.expanded {
+        min-width: fit-content;
+        border-radius: 0 5px 5px 0;
+
+        }
+
+        .container-right {
+        flex: 1;
+        position: absolute;
+        right: 0;
+        top: 5%;
+        width: 95%;
+        height: 95%;
+        text-align: center;
+        color: var(--ebony);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        }
+
+        .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;        
+        cursor: pointer;
+        position: relative;
+        height: 5%;
+        left: 10px;
+        top: 10px;
+        }
+
+        .menu-icon div {
+        width: 50%;
+        max-width: 35px;
+        height: 5px;
+        background-color: var(--cambridge-blue);
+        border-radius: 5px;
+        }
+
+        .border-top {
+        border-top: 2px solid var(--cambridge-blue);
+        }
+
+        .border-bottom{
+        padding-bottom: 5px;
+        border-bottom: 2px solid var(--cambridge-blue);
+        }
+
+        .link-title{
+        color: var(--ash-gray);
+        margin: 10px 5px;
+        }
+
+        .link1 {
+        text-decoration: none;
+        color: var(--dim-gray);
+        font-weight: 900;
+        margin: 10px 5px;
+        }
+
+        .link1:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        color: var(--ash-gray);
+        text-decoration-color: var(--ash-gray);
+        }
+
+        .link2 {
+        text-decoration: none;
+        color: var(--ebony);
+        font-weight: 600;
+        display: block;
+        margin: auto;
+        width: fit-content;
+        padding: 5px 5px 0;
+        border-radius: 5px;
+        border: 2px solid var(--ebony);
+        }
+
+        .link2:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        color: var(--dim-gray);
+        text-decoration-color: var(--dim-gray);
+        
+        }
+
+        .space-evenly {
+        justify-content: space-evenly;
+        }
+
+        .bold {
+        font-weight: 800;
+        }
+
+        .dim-gray{
+        color: var(--dim-gray);
+        }
+
+        .padding-left{
+        padding-left: 5px;
+        }
+
+        #footer-container{
+        /* position: relative;
+        bottom: 0; */
+        background-color: var(--black);
+        border-radius: 0 5px 0 0;
+        border: 2px solid var(--ebony);
+        border-left: none;
+        padding-bottom: 5px;
+        width: 100%;
+
+        }
+
+        .sidebar-links-format{
+        display: flex;
+        flex-direction: column;
+
+        }
+
+        .top-bar{
+            width: 95%;
+            height: 5%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: var(--black);
+            transition: width .3s ease-in-out;
+            overflow: hidden; 
+            z-index: 0;
+            border: 2px solid var(--ebony);
+            border-left: none;
+            padding: 10px 10px;
+        }
+        .top-bar.expanded{
+            height: fit-content;
+            border-radius: 0 5px 5px 0;
+        }
+        .top-bar-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .content{
+            margin: 0 auto;
+            width: 80%;
+            text-align: initial;
+            padding: 5% 0;
+        }
+        .content ol{
+            padding-left: 35px;
+        }
+        .content ul{
+            padding-left: 35px;
+        }
+    </style>
+</head>
+  <body>
+    <main>
+      <section class="container-left"></section>
+
+      <section class="container-right">
+        <section class="top-bar" onmouseenter="toggleTopBar()" onmouseleave="toggleTopBar()">
+        </section>
+        <div>
+          <h1>Ryan Hilliard || Relaxed Hippo || Hobby Webpage</h1>
+          <section class="content"></section>
+        </div>
+        <footer id="footer-container"></footer>
+      </section>
+    </main>
+  </body>
+</html>
