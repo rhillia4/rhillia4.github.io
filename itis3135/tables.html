@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/class-webpage.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Tables - Relaxed Hippo Haberdashery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <section class="container-left">
+    </section>
+    <header>
+        <h1>Relaxed Hippo Haberdashery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Tables Assignment</h2>
+        
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>John Doe - johndoe@gmail.com - $50,000</li>
+            <li>Jane Smith - janesmith@yahoo.com - $60,000</li>
+            <li>Mike Johnson - mikej@business.com - $45,000</li>
+            <li>Lisa Brown - lisa.brown@company.com - $70,000</li>
+            <li>Tom White - tomwhite@gmail.com - $80,000</li>
+            <li>Sarah Green - sgreen@enterprise.org - $55,000</li>
+            <li>Robert Black - robert.black@corp.net - $90,000</li>
+        </ol>
+        
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>johndoe@gmail.com</td>
+                <td>$50,000</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>janesmith@yahoo.com</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td>Mike Johnson</td>
+                <td>mikej@business.com</td>
+                <td>$45,000</td>
+            </tr>
+            <tr>
+                <td>Lisa Brown</td>
+                <td>lisa.brown@company.com</td>
+                <td>$70,000</td>
+            </tr>
+            <tr>
+                <td>Tom White</td>
+                <td>tomwhite@gmail.com</td>
+                <td>$80,000</td>
+            </tr>
+            <tr>
+                <td>Sarah Green</td>
+                <td>sgreen@enterprise.org</td>
+                <td>$55,000</td>
+            </tr>
+            <tr>
+                <td>Robert Black</td>
+                <td>robert.black@corp.net</td>
+                <td>$90,000</td>
+            </tr>
+        </table>
+        
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption>Employee Information</figcaption>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Salary</th>
+                    <th>Monthly Salary</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Management</td>
+                    <td>John Doe</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>$50,000</td>
+                    <td>$4,166</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>janesmith@yahoo.com</td>
+                    <td>$60,000</td>
+                    <td>$5,000</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Sales</td>
+                    <td>Mike Johnson</td>
+                    <td>mikej@business.com</td>
+                    <td>$45,000</td>
+                    <td>$3,750</td>
+                </tr>
+                <tr>
+                    <td>Lisa Brown</td>
+                    <td>lisa.brown@company.com</td>
+                    <td>$70,000</td>
+                    <td>$5,833</td>
+                </tr>
+                <tr>
+                    <td>Tom White</td>
+                    <td>tomwhite@gmail.com</td>
+                    <td>$80,000</td>
+                    <td>$6,666</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Support</td>
+                    <td>Sarah Green</td>
+                    <td>sgreen@enterprise.org</td>
+                    <td>$55,000</td>
+                    <td>$4,583</td>
+                </tr>
+                <tr>
+                    <td>Robert Black</td>
+                    <td>robert.black@corp.net</td>
+                    <td>$90,000</td>
+                    <td>$7,500</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Total Salary Budget</th>
+                    <td>$450,000</td>
+                    <td>$37,500</td>
+                </tr>
+            </table>
+        </figure>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Company</p>
+        <p><a href="https://validator.w3.org/">Validate HTML</a> | <a href="https://jigsaw.w3.org/css-validator/">Validate CSS</a></p>
+    </footer>
+</body>
+</html>
