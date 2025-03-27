@@ -6,11 +6,12 @@
     <script src="scripts/class-webpage.js"></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <title>Tables - Relaxed Hippo Haberdashery</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <style>
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 15px;
         }
         th, td {
             border: 1px solid black;
@@ -24,6 +25,7 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        
     </style>
 </head>
 <body>
@@ -33,11 +35,12 @@
     <header>
         <h1>Relaxed Hippo Haberdashery</h1>
     </header>
-    <main>
+    <main style="text-align: left;">
+        <section>
         <h2>Tables Assignment</h2>
         
         <h3>My Tabular Data</h3>
-        <ol>
+        <ol class="indent">
             <li>John Doe - johndoe@gmail.com - $50,000</li>
             <li>Jane Smith - janesmith@yahoo.com - $60,000</li>
             <li>Mike Johnson - mikej@business.com - $45,000</li>
@@ -154,8 +157,9 @@
                 </tr>
             </table>
         </figure>
+    </section>
     </main>
-    <footer class="footer-container">
+    <footer id="footer-container">
     </footer>
 </section>
 </body>

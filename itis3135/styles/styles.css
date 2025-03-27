@@ -275,3 +275,7 @@ main {
   flex-direction: column;
 
 }
+
+.indent{
+  padding-left: 30px;
+}
