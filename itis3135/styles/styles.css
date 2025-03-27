@@ -123,6 +123,20 @@ main {
   margin: 10px 5px;
 }
 
+.link {
+  text-decoration: none;
+  color: var(--onyx);
+  font-weight: 900;
+  margin: 10px 5px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: var(--onyx);
+  text-decoration-color: var(--onyx);
+}
+
 .link1 {
   text-decoration: none;
   color: var(--dim-gray);
