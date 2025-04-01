@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro</title>
+    <link rel="stylesheet" href="styles/introduction-styles.css">
+    <script src="scripts/survey.js" defer></script>
+    <script src="scripts/class-webpage.js" defer></script>
+</head>
+<body>
+
+    <section class="container-left">
+
+    </section>
+    <section class="container-right">
+
+        <h2>Build Your Own Intro Page</h2>
+        <h3>Time to BYO Intro page! Please fill out the form below.</h3>
+        <section id="content-container">
+
+        <form id="introForm">
+            <label>Name: <input type="text" id="name" value="Ryan Hilliard" required></label><br>
+            <label>Mascot: <input type="text" id="mascot" value="Relaxed Hippo" required></label><br>
+            <label>Image: <input type="file" id="image" accept="image/png, image/jpeg" value="images/profile-pic.jpg" required></label><br>
+            <label>Image Caption: <input type="text" id="caption" value="Contemplating life" required></label><br>
+    
+            <label>Personal Background: <input type="text" id="personalBackground" value="I am from Charlotte NC. I’m 19 and I expect to graduate next spring with a concentration in Software Engineering." required></label><br>
+            <label>Professional Background: <input type="text" id="professionalBackground" value="My first job was lifeguarding. Then I got a job in a restaurant as an essay/expo." required></label><br>
+            <label>Academic Background: <input type="text" id="academicBackground" value="I did dual enrollment in high school and got a year's worth of credits before graduating. I went to UNCW for a year then decided to transfer here." required></label><br>
+            <label>Background in Web Development: <input type="text" id="webBackground" value="I have done some small projects in HTML. I have a lot to learn and am looking forward to doing so." required></label><br>
+            <label>Primary Computer Platform: <input type="text" id="platform" value="Windows" required></label><br>
+    
+            <h4>Courses Currently Taking &amp; Why:</h4>
+            <div id="courses">
+                <script>addDefault()</script>
+                <button type="button" onclick="addCourse()">Add Course</button>
+            </div>
+    
+            <label>Funny Thing: <input type="text" id="funnyThing" value="The dog piece from Monopoly."></label><br>
+            <label>Anything Else? <input type="text" id="anythingElse" value="Something or other..."></label><br>
+    
+            <label>
+                <input type="checkbox" id="agree" required> 
+                I understand that what is on this page is not password protected.
+            </label><br>
+    
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    
+    </section>
+    <div id="output"></div>
+
+        <footer id="footer-container"></footer>
+    </section>
+
+
+</body>
+</html>
