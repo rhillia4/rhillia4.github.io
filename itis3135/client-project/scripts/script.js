@@ -3,7 +3,7 @@ const thisMonthsBook = {
     title: "Banyan Moon",
     author: "Thao Thai",
     bio: '"Banyan Moon" by Thao Thai is a multigenerational family saga that follows three Vietnamese American women from the 1960s to the present, exploring themes of grief, motherhood, and the complexities of family relationships, particularly between mothers and daughters.',
-    date: "04-01-2025",
+    date: "04-21-2025",
     discussionLead: "Shannon",
     location: "Lilac Realty",
     img: "images/thisMonthsCover.jpg"
@@ -25,13 +25,13 @@ function loadBook(idName, book) {
     contentField.innerHTML = `
     <h3>${contentField.title}'s Book</h3>
     <img src="${book.img}" alt="Book Cover" />
-    <p>Book Title: <span id="book-title">${book.title}</span></p>
-    <p>Author: <span id="author-name">${book.author}</span></p>
-    <p>Summary: <span id="book-summary">${book.bio}</span></p>
+    <p><span class="bold">Book Title:</span> <span id="book-title">${book.title}</span></p>
+    <p><span class="bold">Author:</span> <span id="author-name">${book.author}</span></p>
+    <p><span class="bold">Summary:</span> <span id="book-summary">${book.bio}</span></p>
     <h3>${contentField.title}'s Meeting Information</h3>
-    <p>Location: <span id="meeting-location">${book.location}</span></p>
-    <p>Date: <span id="meeting-date">${book.date}</span></p>
-    <p>Discussion Lead: <span id="discussion-lead">${book.discussionLead}</span></p>
+    <p><span class="bold">Location:</span> <span id="meeting-location">${book.location}</span></p>
+    <p><span class="bold">Date:</span> <span id="meeting-date">${book.date}</span></p>
+    <p><span class="bold">Discussion Lead:</span> <span id="discussion-lead">${book.discussionLead}</span></p>
     `;
 }
 
