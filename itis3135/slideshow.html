@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/class-webpage.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ryan Hilliard || Relaxed Hippo || ITIS 3135 || Slideshow</title>
+
+
+  <style>
+    .slideshow-container {
+      text-align: center;
+      margin: 20px;
+    }
+
+    #mainImage {
+      max-width: 90%;
+      height: auto;
+    }
+
+    .thumbnail-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .thumbnail {
+      width: 120px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s ease;
+    }
+
+    .thumbnail:hover {
+      border: 2px solid #333;
+    }
+
+    #caption {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    /* .images-list{
+        width: 50%;
+
+    } */
+  </style>
+</head>
+<body>
+    <main>
+    <section class="container-left"></section>
+
+    <section class="container-right">
+        <h2>Slideshow of Ryan's Name: One Image for Each Letter</h2>
+        <section id="content-container">
+        <div class="slideshow-container">
+        <img id="mainImage" src="images/large-images/r-rose.jpg" alt="R for Rose">
+        <p id="caption">R - for Rose</p>
+        </div>
+
+        <div class="thumbnail-bar">
+        <img class="thumbnail" id="r-rose" src="images/small-images/r-rose.jpg" data-caption="R - for Rose" alt="R for Rose">
+        <img class="thumbnail" id="y-yoyo" src="images/small-images/y-yoyo.jpg" data-caption="Y - for Yo-yo" alt="Y for Yo-yo">
+        <img class="thumbnail" id="a-apple" src="images/small-images/a-apple.jpg" data-caption="A - for Apple" alt="A for Apple">
+        <img class="thumbnail" id="n-notebook" src="images/small-images/n-notebook.jpg" data-caption="N - for Notebook" alt="N for Notebook">
+        <img class="thumbnail" id="h-headphones" src="images/small-images/h-headphones.jpg" data-caption="H - for Headphones" alt="H for Headphones">
+        <img class="thumbnail" id="i-icecream" src="images/small-images/i-icecream.jpg" data-caption="I - for Ice Cream" alt="I for Ice Cream">
+        <img class="thumbnail" id="l-lighthouse" src="images/small-images/l-lighthouse.jpg" data-caption="L - for Lighthouse" alt="L for Lighthouse">
+        <img class="thumbnail" id="l-lamp" src="images/small-images/l-lamp.jpg" data-caption="L - for Lamp" alt="L for Lamp">
+        <img class="thumbnail" id="i-igloo" src="images/small-images/i-igloo.jpg" data-caption="I - for Igloo" alt="I for Igloo">
+        <img class="thumbnail" id="a-avocado" src="images/small-images/a-avocado.jpg" data-caption="A - for Avocado" alt="A for Avocado">
+        <img class="thumbnail" id="r-raccoon" src="images/small-images/r-raccoon.jpg" data-caption="R - for Raccoon" alt="R for Raccoon">
+        <img class="thumbnail" id="d-donut" src="images/small-images/d-donut.jpg" data-caption="D - for Donut" alt="D for Donut">
+        </div>
+
+        <section class="images-list">
+        <h3>AI Image Prompts Used:</h3>
+        <ul class="indent">
+            <li>R - "A single red rose lying on a wooden table, landscape orientation"</li>
+            <li>Y - "A classic wooden yo-yo with a string on a neutral background, wide angle"</li>
+            <li>A - "A shiny red apple on a cutting board with soft lighting, horizontal layout"</li>
+            <li>N - "A spiral notebook open on a desk with a pen, landscape view"</li>
+            <li style="list-style-type: none;"><br></li>
+            <li>H - "Over-ear headphones resting on a table, modern style, landscape format"</li>
+            <li>I - "An ice cream cone melting on a sidewalk, colorful background, landscape mode"</li>
+            <li>L - "A tall lighthouse near the ocean during sunset, landscape photo"</li>
+            <li>L - "A cozy table lamp on a nightstand with a glowing bulb, horizontal view"</li>
+            <li>I - "A white igloo surrounded by snow, blue sky, wide frame"</li>
+            <li>A - "A fresh avocado cut in half on a kitchen counter, horizontal layout"</li>
+            <li>R - "A raccoon in a forest looking at the camera, wide forest view"</li>
+            <li>D - "A chocolate-frosted donut on a colorful plate, landscape perspective"</li>
+        </ul>
+        </section>
+    </section>
+        <footer id="footer-container"></footer>
+    </section>
+</main>
+
+</body>
+</html>

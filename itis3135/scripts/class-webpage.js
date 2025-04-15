@@ -37,6 +37,29 @@ async function preloadContent() {
 // Call preloadContent when the page loads
 document.addEventListener("DOMContentLoaded", preloadContent);
 
+$(document).ready(function() {
+  // Select all thumbnails
+  const thumbnails = $(".thumbnail");
+
+  // Set up an event listener for each thumbnail
+  thumbnails.each(function() {
+      $(this).click(function() {
+          // Get the source of the clicked thumbnail
+          const newSrc = $(this).attr("id");
+          // Get the caption of the clicked thumbnail
+          const newCaption = $(this).data("caption");
+          console.log(newSrc);
+          console.log(newCaption);
+
+          // Change the main image to the clicked thumbnail's image
+          $("#mainImage").attr("src", `images/large-images/${newSrc}.jpg`);
+          // Update the caption
+          $("#caption").text(newCaption);
+      });
+  });
+});
+
+
 async function toggleSidebar() {
   const container1 = document.querySelector(".container-left");
   container1.classList.toggle("expanded");
